@@ -23,6 +23,32 @@ Git workflow reference covering common operations:
 Simple CLI utilities:
 - SHA-256 checksum generation
 
+### tumblr-followers.py
+Prints follower counts for the Tumblr blogs you own, using the Tumblr API with OAuth2. Credentials live in the macOS Keychain.
+
+```bash
+# One time: register an app at https://www.tumblr.com/oauth/apps
+# with redirect URL http://localhost:8765/callback, then:
+./tumblr-followers.py setup
+
+# Every blog on the account, or one blog's count
+./tumblr-followers.py
+./tumblr-followers.py myblog
+```
+
+### strava-followers.py
+Prints your Strava follower count, using the Strava API with OAuth2. Credentials live in the macOS Keychain.
+
+```bash
+# One time: create an app at https://www.strava.com/settings/api
+# with Authorization Callback Domain set to localhost, then:
+./strava-followers.py setup
+
+# Follower count, or followers and following
+./strava-followers.py
+./strava-followers.py --following
+```
+
 ## Usage
 
 These are primarily reference files. Copy commands as needed, or source them:
